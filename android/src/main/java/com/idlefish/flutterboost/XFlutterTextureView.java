@@ -94,6 +94,13 @@ public class XFlutterTextureView extends TextureView implements RenderSurface {
     return flutterRenderer;
   }
 
+
+  @Override
+  public void	pause() {
+    //todo 
+  }
+
+
   /**
    * Invoked by the owner of this {@code FlutterTextureView} when it wants to begin rendering
    * a Flutter UI to this {@code FlutterTextureView}.

@@ -116,6 +116,20 @@ public class XTextInputPlugin {
             public void clearClient() {
                 clearTextInputClient();
             }
+
+
+            @Override
+            public void requestAutofill() {
+
+            }
+
+
+            @Override
+            public void setEditableSizeAndTransform(double width, double height, double[] transform) {
+                
+            }
+
+
         });
         restartAlwaysRequired = isRestartAlwaysRequired();
 

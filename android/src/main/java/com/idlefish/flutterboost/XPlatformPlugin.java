@@ -34,6 +34,7 @@ public class XPlatformPlugin {
     private int mEnabledOverlays;
 
     private  PlatformChannel.PlatformMessageHandler mPlatformMessageHandler = new PlatformChannel.PlatformMessageHandler() {
+  
         @Override
         public void playSystemSound(@NonNull PlatformChannel.SoundType soundType) {
             XPlatformPlugin.this.playSystemSound(soundType);
@@ -84,15 +85,26 @@ public class XPlatformPlugin {
             XPlatformPlugin.this.setClipboardData(text);
         }
 
-        @Override
-        public List<Rect> getSystemGestureExclusionRects() {
-            return XPlatformPlugin.this.getSystemGestureExclusionRects();
-        }
+        // @Override
+        // public List<Rect> getSystemGestureExclusionRects() {
+        //     return XPlatformPlugin.this.getSystemGestureExclusionRects();
+        // }
 
-        @Override
-        public void setSystemGestureExclusionRects(@NonNull ArrayList<Rect> rects) {
-            XPlatformPlugin.this.setSystemGestureExclusionRects(rects);
-        }
+        // @Override
+        // public void setSystemGestureExclusionRects(@NonNull ArrayList<Rect> rects) {
+        //     XPlatformPlugin.this.setSystemGestureExclusionRects(rects);
+        // }
+    
+        // @Override
+        // public void handleMessageFromDart(String channel, byte[] message, int replyId) {
+
+        // }
+
+        // @Override
+        // public void handlePlatformMessageResponse(int replyId, byte[] reply) {
+
+        // }
+
     };
 
     public XPlatformPlugin(PlatformChannel platformChannel) {
