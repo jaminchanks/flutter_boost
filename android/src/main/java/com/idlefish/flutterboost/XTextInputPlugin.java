@@ -120,13 +120,13 @@ public class XTextInputPlugin {
 
             @Override
             public void requestAutofill() {
-
+                //not supported
             }
 
 
             @Override
             public void setEditableSizeAndTransform(double width, double height, double[] transform) {
-                
+                //not supported
             }
 
 

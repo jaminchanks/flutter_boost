@@ -96,8 +96,15 @@ public class XFlutterTextureView extends TextureView implements RenderSurface {
 
 
   @Override
-  public void	pause() {
-    //todo 
+  public void pause() {
+    if (flutterRenderer != null) {
+      // Don't remove the `flutterUiDisplayListener` as `onFlutterUiDisplayed()` will make
+      // the `FlutterSurfaceView` visible.
+      flutterRenderer = null;
+      isAttachedToFlutterRenderer = false;
+    } else {
+      Log.w(TAG, "pause() invoked when no FlutterRenderer was attached.");
+    }
   }
 
 
